@@ -6,15 +6,15 @@ This is a sample repository that is preconfigured to provision the following res
 - SQL database
 
 ## Prerequisites
-1. Terraform CLI
-2. Terragrunt CLI
-3. Azure Subscription
-4. Az CLI
+1. [Terraform CLI](https://www.terraform.io/downloads)
+2. [Terragrunt CLI](https://terragrunt.gruntwork.io/docs/getting-started/install/)
+3. [Azure Subscription](https://azure.microsoft.com/en-us/)
+4. [Az CLI](https://docs.microsoft.com/en-us/cli/azure/)
 
 ## Quick start
-1. az login
+1. Run ```az login``` and ensure you are connected to the proper subscription
 2. Run ```terraform init``` from within ```/bootstrap``` folder
-3. Run ```terraform apply``` in ```/bootstrap``` folder
+3. Run ```terraform apply``` in ```/bootstrap``` folder; this will create several resource groups and a storage account.
 4. Observe command output to grab state file storage account name and container (run ```terraform output``` from within ```/bootstrap``` folder)
 
 ```
