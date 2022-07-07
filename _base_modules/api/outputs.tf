@@ -6,6 +6,6 @@
 #     value =  [for o in module.api : o.app_name]
 # }
 
-# output "service_endpoints" {
-#     value =  [for o in module.api : o.service_endpoints]
-# }
+output "database_id" {
+  value = var.database_id
+}

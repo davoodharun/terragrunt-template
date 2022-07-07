@@ -2,55 +2,29 @@ variable "identifier" {
   type = object({
       primary = string
       secondary = string
+      type = string
   })
 }
 
-
-variable "tags" {
-  type = object({})
-}
-
-variable "appserviceplan" {
+variable "service_plan" {
     type = object({
         sku_name = string
         os_type = string
     })
     default = {
-        sku_name = "Free"
+        sku_name = "P1v2"
         os_type = "Linux"
     }
 }
 
-variable "devops_creator" {
-  type = string
-  default = "Eu-DevOps"
-}
-
 variable "resources" {
   type = map(object({
-     resource_group_name = string
-      apim_instances = map(object({
-          name = string
-          resource_group_name = string
-      }))
+      resource_group_name = string
       appsettings = object({})
+      location = string
   }))
 }
 
-variable "keyvault_name" {
-  type = string
-  description = "name of keyvault app service secrets exist in"
-}
-
-variable "keyvault_resource_group_name" {
-  type = string
-  description = "name of resource group of keyvault"
-}
-
-variable docker_image_name {
-  type = string
-}
-
-variable docker_image_tag {
+variable "database_id" {
   type = string
 }
